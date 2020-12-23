@@ -1,0 +1,71 @@
+@import "../settings/variables";
+
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 7rem;
+  overflow: hidden;
+
+  h1 {
+    @include Raleway(500, 3.5rem, 4.1rem);
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    color: #000000;
+
+
+    @media (min-width: 700px) {
+      @include Raleway(500, 4.2rem, 4.8rem);
+    }
+  }
+
+  p {
+    @include Raleway(500, 1.6rem, 2.2rem);
+    margin-bottom: 2.8rem;
+    color: #000000;
+    padding: 0 7rem;
+
+  }
+
+  .section1__btn {
+    @include OpenSans(600, 1.6rem, 2.2rem);
+    background-color: $base-color-blue;
+    color: #fff;
+    padding: 2.2rem 9.2rem;
+    border-radius: 4rem;
+    margin-bottom: 5.1rem;
+    box-shadow: 0.5rem 1rem 1.4rem #07ACE629;
+
+    @media (min-width: 550px) {
+      font-weight: 700;
+      padding: 2.3rem 12.7rem;
+    }
+
+    @media (min-width: 850px) {
+      padding: 2.3rem 15.7rem;
+    }
+  }
+
+  img {
+    height: 26.7rem;
+    width: auto;
+
+    @media (min-width: 550px) {
+      height: 29.5rem;
+    }
+
+    @media (min-width: 700px) {
+      height: 34rem;
+    }
+
+    @media (min-width: 850px) {
+      height: 43rem;
+    }
+
+    @media (min-width: 1024px) {
+      height: 51.4rem;
+    }
+  }
+}

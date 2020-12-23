@@ -1,0 +1,381 @@
+@import "../settings/variables";
+
+.limit3 {
+  margin: 0 auto;
+  max-width: 1322px;
+}
+
+.section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 800px) {
+    margin-bottom: 10rem;
+  }
+
+  .section4__title {
+    @include Raleway(500, 3.6rem, 4.2rem);
+    margin-top: 5.4rem;
+    margin-bottom: 1.8rem;
+
+    @media (min-width: 800px) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .section4__offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 800px) {
+      flex-direction: row;
+      width: 100vw;
+    }
+
+    .section4__offer1 {
+      @include boxes(#FB3B64, 29.3rem, 25.1rem);
+      position: relative;
+
+      @media (min-width: 800px) {
+        @include boxesRwd(29vw, 35rem);
+        margin-left: 3rem;
+      }
+
+      @media (min-width: 1120px) {
+        height: 46rem;
+      }
+
+      .price {
+        text-align: center;
+        margin-left: 2rem;
+
+        @media (min-width: 800px) {
+          margin-left: 0;
+          margin-bottom: 2.8rem;
+        }
+
+        .box__title {
+          @include Raleway(700, 2rem, 0.1rem);
+          margin-bottom: 2rem;
+
+          @media (min-width: 800px) {
+            margin-top: 3.5rem;
+          }
+
+          @media (min-width: 1120px) {
+            margin-bottom: 5.5rem;
+          }
+        }
+
+        .box__price {
+          @include OpenSans(300, 4.6rem, auto);
+          color: #FB3B64;
+          margin-bottom: 1.3rem;
+
+          @media (min-width: 800px) {
+            font-size: 3.7rem;
+          }
+
+          @media (min-width: 1120px) {
+            line-height: 0.2rem;
+            margin-bottom: 6rem;
+          }
+        }
+      }
+
+      .options {
+        @include OpenSans(400, 1.4rem, 4.1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: 6.3rem;
+        margin-bottom: 2rem;
+
+        @media (min-width: 800px) {
+          margin-left: 1.4rem;
+          font-size: 1.1rem;
+          line-height: 3.4rem;
+          align-items: center;
+        }
+
+        @media (min-width: 1120px) {
+          font-size: 1.4rem;
+          line-height: 4.1rem;
+          margin-left: 1.4rem;
+        }
+
+        .box__info {
+          position: relative;
+
+          @media (min-width: 1120px) {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        .box__icon {
+          height: 1.3rem;
+          width: 1.3rem;
+          position: absolute;
+          left: -1.9rem;
+          top: 1.4rem;
+
+          @media (min-width: 800px) {
+            top: 1rem;
+          }
+
+          @media (min-width: 1120px) {
+            top: 1.4rem;
+          }
+        }
+      }
+
+      .box__button {
+        @include buttonBegin(#EB476E);
+        position: absolute;
+        bottom: -25px;
+      }
+    }
+
+    .section4__main-offer {
+      @include boxes(#07ACE6, 33.9rem, 27.7rem);
+      box-shadow: 0.5rem 1rem 2.7rem #07ACE629;
+      position: relative;
+
+      @media (min-width: 800px) {
+        @include boxesRwd(35vw, 38rem);
+        margin-left: 4rem;
+        margin-right: 4rem;
+      }
+
+      @media (min-width: 900px) {
+        margin-left: 7rem;
+        margin-right: 7rem;
+      }
+
+      @media (min-width: 1120px) {
+        @include boxesRwd(35vw, 50rem);
+      }
+
+
+      .price {
+        text-align: center;
+
+        .box__title {
+          @include Raleway(700, 2rem, 0.1rem);
+          margin-bottom: 2rem;
+
+          @media (min-width: 800px) {
+            margin-top: 3.7rem;
+          }
+
+          @media (min-width: 1120px) {
+            @include Raleway(700, 2.1rem, 0.1rem);
+            margin-bottom: 5.5rem;
+          }
+        }
+
+        .box__price {
+          @include OpenSans(300, 4.6rem, auto);
+          color: #07ACE6;
+          margin-bottom: 1.3rem;
+        }
+
+        @media (min-width: 1120px) {
+          @include OpenSans(300, 4.6rem, 0.2rem);
+        }
+
+        .box__description {
+          @include Raleway(700, 1.2rem, auto);
+
+          @media (min-width: 800px) {
+            margin-bottom: 3rem;
+          }
+
+          @media (min-width: 1120px) {
+            margin-bottom: 5.1rem;
+          }
+
+          @media (min-width: 1120px) {
+            margin-top: 4rem;
+          }
+
+        }
+      }
+
+      .options {
+        @include OpenSans(400, 1.4rem, 4.1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: 5.8rem;
+        margin-bottom: 2rem;
+
+        @media (min-width: 800px) {
+          margin-left: 2.3rem;
+          font-size: 1.2rem;
+          line-height: 3.5rem;
+          align-items: center;
+        }
+
+        @media (min-width: 1120px) {
+          @include OpenSans(400, 1.4rem, 4.1rem);
+          align-items: center;
+          margin-left: 1.2rem;
+        }
+
+        .box__info {
+          position: relative;
+
+          @media (min-width: 1120px) {
+            margin-bottom: 1.1rem;
+          }
+        }
+
+        .box__icon {
+          height: 1.3rem;
+          width: 1.3rem;
+          position: absolute;
+          left: -1.9rem;
+          top: 1.4rem;
+
+          @media (min-width: 800px) {
+            top: 1.05rem;
+          }
+
+          @media (min-width: 1120px) {
+            top: 1.5rem;
+          }
+        }
+      }
+
+      .box__button {
+        @include buttonBegin(#07ACE6);
+        box-shadow: 0.5rem 1rem 1.4rem #07ACE629;
+        position: absolute;
+        bottom: -25px;
+      }
+    }
+
+    .section4__offer3 {
+      @include boxes(#55DFB4, 29.3rem, 25.1rem);
+      position: relative;
+
+      @media (min-width: 800px) {
+        @include boxesRwd(29vw, 35rem);
+        margin-bottom: 5.3rem;
+        margin-right: 3rem;
+      }
+
+      @media (min-width: 1120px) {
+        @include boxesRwd(29vw, 46rem);
+      }
+
+      .price {
+        text-align: center;
+
+        @media (min-width: 800px) {
+          margin-right: 1rem;
+        }
+
+        .box__title {
+          @include Raleway(700, 2rem, 0.1rem);
+          margin-bottom: 2rem;
+
+          @media (min-width: 800px) {
+            margin-top: 3.3rem;
+          }
+
+          @media (min-width: 1120px) {
+            @include Raleway(700, 2rem, 0.1rem);
+            margin-bottom: 5.5rem;
+          }
+
+        }
+
+        .box__price {
+          @include OpenSans(300, 4.6rem, auto);
+          color: #55DFB4;
+          margin-bottom: 1.3rem;
+
+          @media (min-width: 800px) {
+            font-size: 3.7rem;
+          }
+
+          @media (min-width: 1120px) {
+            @include OpenSans(300, 4.6rem, 0.2rem);
+          }
+        }
+
+        .box__description {
+          @include Raleway(700, 1.2rem, auto);
+
+          @media (min-width: 800px) {
+            margin-bottom: 2rem;
+          }
+
+          @media (min-width: 1120px) {
+            margin-top: 3.5rem;
+            margin-bottom: 4.2rem;
+          }
+        }
+      }
+
+      .options {
+        @include OpenSans(400, 1.4rem, 4.1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-left: 4.6rem;
+        margin-bottom: 2rem;
+
+        @media (min-width: 800px) {
+          margin-left: 1rem;
+          font-size: 1.1rem;
+          line-height: 3.4rem;
+          align-items: center;
+        }
+
+        @media (min-width: 1120px) {
+          @include OpenSans(400, 1.4rem, 4.1rem);
+          align-items: center;
+          margin-left: 1rem;
+        }
+
+        .box__info {
+          position: relative;
+
+          @media (min-width: 1120px) {
+            margin-bottom: 0.5rem;
+          }
+        }
+
+        .box__icon {
+          height: 1.3rem;
+          width: 1.3rem;
+          position: absolute;
+          left: -1.9rem;
+          top: 1.4rem;
+
+          @media (min-width: 800px) {
+            top: 1.1rem;
+          }
+
+          @media (min-width: 1120px) {
+            top: 1.4rem;
+          }
+        }
+      }
+
+      .box__button {
+        @include buttonBegin(#55DFB4);
+        position: absolute;
+        bottom: -25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+@import "../settings/variables";
+
+.limit {
+  margin: 0 auto;
+  max-width: 1422px;
+  width: 100%;
+}
+
+.menu {
+  position: fixed;
+  background-color: #fff;
+  z-index: 10;
+  width: 100vw;
+  box-shadow: 0 3px 6px #00000029;
+
+
+  .container {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    @media (min-width: 700px) {
+      padding-left: 3rem;
+      padding-right: 2.3rem;
+    }
+
+    @media (min-width: 950px) {
+      padding: 0 6rem;
+    }
+
+
+    .menu__logo {
+      color: $base-color-blue;
+      @include Raleway(300, 3.2rem, 3.7rem);
+      padding: 2.5rem;
+
+      @media (min-width: 700px) {
+        padding: 0;
+      }
+    }
+
+    .menu__toggle {
+      text-decoration: none;
+      color: $base-color-blue;
+      display: inline-block;
+      background-color: transparent;
+      border-radius: 4px;
+      position: absolute;
+      top: 2.2rem;
+      right: 2.5rem;
+
+      @media (min-width: 700px) {
+        display: none;
+      }
+
+
+      .fas.fa-bars {
+        font-size: 2.5rem;
+
+      }
+
+      .fas.fa-times {
+        display: none;
+
+      }
+    }
+
+  }
+
+  .menu__btn {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+
+    &:checked {
+
+      ~ .menu__nav {
+        position: absolute;
+        display: block;
+        top: 5.4rem;
+        background-color: #fff;
+
+        @media (min-width: 700px) {
+          display: none;
+        }
+      }
+
+      ~ .menu__toggle {
+
+          .fas.fa-times {
+            display: inline-block;
+            position: absolute;
+            top: -0.26rem;
+            right: 0;
+            color: rgba(116, 182, 223, 0.94);
+            font-size: 3rem;
+            width: 2.15rem;
+          }
+
+          .fas.fa-bars {
+            display: none;
+          }
+      }
+    }
+  }
+
+  .menu__nav {
+    display: none;
+
+    @media (min-width: 700px) {
+      display: flex;
+    }
+
+    .menu__buttons {
+      margin-top: 20px;
+
+      @media (min-width: 700px) {
+        display: flex;
+        color: #A5A5A5;
+        font-size: 11px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        margin-top: 0;
+
+      }
+
+        .menu__links {
+          display: block;
+          padding: 16px 2.6rem;
+          font-size: 1.2rem;
+          font-family: "Raleway", sans-serif;
+          background-color: #fff;
+          border-bottom: 1px solid #e8e8e8;
+          width: 100vw;
+
+
+          @media (min-width: 700px) {
+            display: unset;
+            padding: 28px 11px 25px 10px;
+            margin-left: 1.4rem;
+            color: #A5A5A5;
+            font-size: 11px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            letter-spacing: 3.28px;
+            border: none;
+
+            &:hover {
+              color: black;
+              border-bottom: 3px solid #08A6E4;
+            }
+          }
+
+          @media (min-width: 950px) {
+            margin-left: 40px;
+
+            &:hover {
+              color: black;
+              border-bottom: 3px solid #08A6E4;
+            }
+          }
+
+          @media (min-width: 1050px) {
+            margin-left: 75px;
+          }
+
+          &.active {
+            border-top: 1px solid #e8e8e8;
+          }
+        }
+      }
+
+    }
+  }

@@ -1,0 +1,137 @@
+@import "../settings/variables";
+
+.section5 {
+  padding: 4.4rem 3rem;
+
+  @media (min-width: 800px) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 896px;
+    padding: 0;
+    margin-bottom: 5.9rem;
+  }
+
+  .section5__content {
+
+    .section5__title {
+      @include Raleway(500, 4rem, 4.7rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .section5__description {
+      @include OpenSans(500, 1.6rem, 2.2rem);
+    }
+
+    .section5__contact {
+
+      @media (min-width: 800px) {
+        display: flex;
+      }
+
+      .section5__mail {
+        @include OpenSans(500, 1.6rem, 2.2rem);
+        color: #A5A5A5;
+        margin-top: 4rem;
+      }
+
+      .section5__phone {
+        @include OpenSans(500, 1.6rem, 2.2rem);
+        color: #A5A5A5;
+        margin-top: 1rem;
+
+        @media (min-width: 800px) {
+          margin-top: 4rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .section5__form {
+    margin-top: 5rem;
+
+    @media (min-width: 800px) {
+      width: 50%;
+      margin-top: 0;
+    }
+
+    p {
+      @include OpenSans(700, 1.1rem, 1.5rem);
+      letter-spacing: 0.328rem;
+      color: $base-color-blue;
+    }
+
+    .form-control {
+      @include OpenSans(300, 1.5rem, 0.3rem);
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #aaa;
+      width: 100%;
+      height: 4.5rem;
+      color: #A5A5A5;
+      padding: 0;
+      margin-bottom: 4.2rem;
+    }
+
+    .form__consent {
+      display: flex;
+      flex-direction: column;
+
+
+      .form__checkbox {
+        position: relative;
+
+        .default__checkbox {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+
+          &:checked {
+            ~ .new__checkbox {
+              background-image: url(../assets/Checkmark.svg);
+              background-position: center;
+              background-size: 70%;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+
+        .new__checkbox {
+          position: absolute;
+          top: 0.35rem;
+          left: 0;
+          height: 2.4rem;
+          width: 2.4rem;
+          border: 1px solid #95989A;
+          border-radius: 4px;
+          margin-right: 0.7rem;
+        }
+
+        p {
+          @include OpenSans(500, 1.2rem, 1.7rem);
+          letter-spacing: normal;
+          color: #707070;
+          margin-left: 3.7rem;
+        }
+
+      }
+
+      .section5__btn {
+        @include OpenSans(700, 1.3rem, 1.8rem);
+        color: #fff;
+        margin-right: 0;
+        padding: 2rem 9.7rem;
+        background-color: $base-color-blue;
+        border-radius: 3.5rem;
+        border: none;
+        align-self: flex-end;
+        margin-top: 2.5rem;
+        box-shadow: .5rem 1rem 1.4rem #07ACE629;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "generic/reset";
+@import "settings/variables";
+@import "elements/header";
+@import "elements/section1";
+@import "elements/section2";
+@import "elements/section3";
+@import "elements/section4";
+@import "elements/section5";
+@import "elements/footer";
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

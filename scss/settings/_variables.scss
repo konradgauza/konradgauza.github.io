@@ -1,0 +1,77 @@
+$base-color-blue: #08A6E4;
+
+
+@mixin Raleway($weight, $size, $lheight) {
+  font-family: "Raleway", sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lheight;
+}
+
+@mixin OpenSans($weight, $size, $lheight) {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lheight;
+}
+
+@mixin colorCircle($color) {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: $color;
+  position: relative;
+  z-index: 0;
+  left: -0.8rem;
+}
+
+@mixin boxes($color, $width, $height) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  border: 1px solid $color;
+  width: $width;
+  height: $height;
+  margin-bottom: 5.4rem;
+}
+
+@mixin boxesRwd($width, $height) {
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  justify-content: unset;
+  width: $width;
+  height: $height;
+}
+
+@mixin buttonBegin($color) {
+  padding: 1.6rem 5.7rem;
+  background-color: $color;
+  @include OpenSans(700, 1.3rem, auto);
+  color: #fff;
+  border-radius: 2.3rem;
+}
+
+@mixin section3Line($color) {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: inline-block;
+    height: 4px;
+    width: 70%;
+    background-color: $color;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 720px) {
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 950px) {
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+  }
+}
